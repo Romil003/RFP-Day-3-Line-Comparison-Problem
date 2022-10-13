@@ -6,14 +6,19 @@ public class LineComparison {
 
     static void calculateLength(double x11,double y11,double x12,double y12,double x21,double y21,double x22,double y22){
 
-        double line1Length = Math.sqrt(Math.pow(x12-x11,2)+Math.pow(y12-y11,2));
-        System.out.println(line1Length);
-        double line2Length = Math.sqrt(Math.pow(x22-x21,2)+Math.pow(y22-y21,2));
-        System.out.println(line2Length);
-        if (line1Length == line2Length){
+        Double line1Length = Math.sqrt(Math.pow(x12-x11,2)+Math.pow(y12-y11,2));
+        System.out.println("Line 1 length = " + line1Length);
+        System.out.println();
+        Double line2Length = Math.sqrt(Math.pow(x22-x21,2)+Math.pow(y22-y21,2));
+        System.out.println("Line 2 length = " + line2Length);
+        System.out.println();
+
+        int res = line1Length.compareTo(line2Length);
+
+        if (res == 0){
             System.out.println("Line 1 length is equal to Line 2 length");
         }
-        else if (line1Length > line2Length) {
+        else if (res == 1) {
             System.out.println("Line 1 length is greater than Line 2 length");
         }
         else {
@@ -41,6 +46,7 @@ public class LineComparison {
         double x22 = sc.nextInt();
         System.out.println("Enter Line2 y22 co-ordinate");
         double y22 = sc.nextInt();
+        System.out.println();
         calculateLength(x11,y11,x12,y12,x21,y21,x22,y22);
 
     }
