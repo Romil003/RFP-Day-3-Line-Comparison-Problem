@@ -5,12 +5,7 @@ import java.util.Scanner;
 public class LineComparison {
 
     static void calculateLength(int x1,int y1,int x2,int y2){
-//        int a = x2-x1 ;
-//        int res1 = a*a;
-//        int b = y2-y1;
-//        int res2 = b*b;
-//        double length = Math.sqrt(res1+res2);
-//        System.out.println(length);
+
         double Length = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
         System.out.println(Length);
 
